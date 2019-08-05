@@ -1,0 +1,46 @@
+!parameters
+%% DEMOGRAPHY
+'probability of dying persistence' rho_prob_die
+'probability of retirement persistence' rho_prob_ret
+'fertility rate persistence' rho_fert
+
+%% HOUSEHOLDS
+'time discount factor' betta
+'inverse of intertemporal elasticity of substitution / relative risk aversion parameter' gamma
+'fraction of young on profits and lump sum' xi
+
+%% FIRMS
+'demand price elasticity' phi
+'capital depreciation rate' delta
+'technology persistence' rho_a
+'price adjustment cost scaling factor' phi_pr
+'investment adjustment scaling factor' phi_inv
+'price indexation factor' gamma_pr
+'probability of firing' prob_f
+'capital share on production' alpha
+
+%% LABOUR MARKET
+'hiring costs elasticity w.r.t. probability of hiring' alpha_hc
+'hiring costs scaling factor' kappa
+'worker bargaining power' sigma
+
+%% MONETARY
+'nominal interest rate persistence' rho_i
+'weight of inflation expectation in the Taylor rule' phi_pi
+
+%% FISCAL
+'lump sum taxes: constancy switcher' eta_lump
+'lump sum taxes: persistence' rho_lump
+'personal income tax rate: constancy switcher' eta_tau_pi
+'personal income tax rate: persistence' rho_tau_pi
+'consumption tax rate: constancy switcher' eta_tau_c
+'consumption tax rate: persistence' rho_tau_c
+'social constribution rate (worker): constancy switcher' eta_tau_sw
+'social constribution rate (worker): persistence' rho_tau_sw
+'social constribution rate (firm): constancy switcher' eta_tau_sf
+'social constribution rate (firm): persistence' rho_tau_sf
+'government consumption: constancy switcher' eta_gov
+'government consumption: persistence' rho_gov
+'unemployment benefits: constancy switcher' eta_w_u
+'unemployment benefits: persistence' rho_w_u
+'total government balance target: persistence' rho_GB_tar

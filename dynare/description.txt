@@ -1,0 +1,19 @@
+***************** SCENARIA ******************************
+
+----- 1. DEMOGRAPHY -----
+0 = decline in mortality rate such that dependency ratio increases by 5 p.p.
+1 = decline in fertility rate such that dependency ratio increases by 5 p.p.
+    need to be changed, resulting shock in fertility is too large (BCC violated)
+2 = increase in retirement probability such that dependency ratio increases by 5 p.p.
+
+----- 2. FISCAL -----
+3 = decline in consumption rate by 1p.p. of mid-run consumption tax revenues/GDP
+4 = decline in personal income tax by 1p.p. of mid-run personal income tax revenues/GDP
+5 = decline in social security contribution rate of firms by 1p.p. of mid-run 
+    firms' social security contribution revenues/GDP
+6 = decline in social security contribution rate of workers by 1p.p. of mid-run 
+    workers' social security contribution revenues/GDP
+7 = cut in government consumption by 1 p.p. of mid-run government consumption/GDP
+8 = increase in unemployment benefits by 1 p.p of mid-run unemployment benefits spending/GDP
+9 = increase in replacement rate by 2.5p.p.
+10 = increase in retirement probability by 0.4p.p.

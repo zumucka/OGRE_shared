@@ -1,0 +1,205 @@
+Starting Dynare (version 4.5.7).
+Starting preprocessing of the model file ...
+Substitution of endo lags >= 2: added 1 auxiliary variables and equations.
+Found 78 equation(s).
+Evaluating expressions...done
+Computing static model derivatives:
+ - order 1
+Computing dynamic model derivatives:
+ - order 1
+Processing outputs ...
+done
+Preprocessing completed.
+[Warning: Some of the parameters have no value (phi, a_ss, kappa, r_ss, GB_tar_ss, Lump_ss, tau_pi_ss, tau_sw_ss, tau_sf_ss,
+tau_c_ss) when using steady. If these parameters are not initialized in a steadystate file or a steady_state_model-block,
+Dynare may not be able to solve the model...] 
+
+     Niter    resnorm   stepnorm     lambda      rcond  convergence
+-------------------------------------------------------------------
+         0      4.875          0          1  0.0009911          Inf
+         1     0.3853     0.3101          1   0.002112        2.538
+         2    0.01087    0.05594          1   0.001718        3.568
+         3  0.0001284   0.007563          1   0.001675        4.439
+         4  2.341e-08  0.0001041          1   0.001674         8.61
+         5  4.752e-14  1.902e-08          1   0.001674        13.11
+
+STEADY-STATE RESULTS:
+
+share            		 0.230769
+share_y          		 0.8125
+prob_die         		 0.05
+prob_ret         		 0.015
+fert             		 0.03
+g_n              		 0.015
+g_ny             		 0.015
+g_no             		 0.015
+g                		 0.030225
+Omega_o          		 10.7849
+C                		 0.547492
+C_o              		 0.0824093
+Inc_o            		 0
+PF_o             		 18.8525
+B_o              		 0.90455
+C_y              		 0.465083
+PF_y             		 56.4059
+B_y              		 1.3609
+Inc_y            		 11.5118
+Labinc_y         		 0.432713
+Profinc_y        		 0.0874539
+Peninc_y         		 13.9882
+Lambda_t         		 0.891483
+Lambda           		 0.99
+Y                		 0.967553
+I                		 0.214157
+a                		 1
+g_a              		 0.015
+Profit           		 0.163212
+z                		 0.147088
+K                		 1.69422
+mc               		 0.833333
+q                		 1
+adj_pr           		 0
+adj_pr_d         		 0
+adj_inv          		 0
+adj_inv_d        		 0
+pi               		 0
+w                		 0.647834
+L                		 0.770812
+hc               		 0.177398
+H                		 0.0873333
+prob_h           		 0.746348
+w_b_max          		 0.411767
+U                		 0.0416883
+r                		 0.0470882
+i                		 0.0470882
+tau_c            		 0.121726
+tau_lw           		 0.152526
+tau_sf           		 0.0953285
+tau_sw           		 0.0571971
+tau_pi           		 0.0953285
+tau_l            		 0.247854
+w_u              		 0.228376
+Uw_u             		 0.00952061
+Gov              		 0.190412
+Lump             		 0.0757577
+Pen              		 0.0568869
+B                		 0.571236
+B_pen            		 0
+GDP              		 0.952061
+PB               		 0.00935025
+GB               		 -0.0167591
+GB_tar           		 0.0589986
+Rev              		 0.26617
+Ex               		 0.25682
+tau_c_rev_GDP    		 0.07
+tau_pi_rev_GDP   		 0.05
+tau_sf_rev_GDP   		 0.05
+tau_sw_rev_GDP   		 0.03
+Gov_GDP          		 0.2
+Uwu_GDP          		 0.01
+B_GDP            		 0.6
+Pen_PG           		 0.0568869
+Pen_PG_yo        		 0.00442986
+IB               		 0.357941
+nu               		 0.85
+
+     Niter    resnorm   stepnorm     lambda      rcond  convergence
+-------------------------------------------------------------------
+         0      4.875          0          1  0.0009911          Inf
+         1     0.3853     0.3101          1   0.002112        2.538
+         2    0.01087    0.05594          1   0.001718        3.568
+         3  0.0001284   0.007563          1   0.001675        4.439
+         4  2.341e-08  0.0001041          1   0.001674         8.61
+         5  4.752e-14  1.902e-08          1   0.001674        13.11
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+               0                0                0
+               0               -0                0
+               0                0                0
+               0               -0                0
+               0                0                0
+               0               -0                0
+               0                0                0
+        3.21e-17         3.21e-17                0
+       1.291e-16       -1.291e-16                0
+       4.384e-16        4.384e-16                0
+       1.307e-15       -1.307e-15                0
+       2.136e-08        2.136e-08                0
+       2.136e-08       -2.136e-08                0
+          0.2751          -0.2751                0
+          0.3922           0.3371           0.2005
+          0.3922           0.3371          -0.2005
+            0.66             0.66                0
+             0.8              0.8                0
+          0.8183           0.8183                0
+          0.8378           0.8378                0
+          0.9028           0.9027          0.01317
+          0.9028           0.9027         -0.01317
+           0.936            0.936                0
+          0.9444           0.9444                0
+            0.95             0.95                0
+            0.95             0.95                0
+            0.95             0.95                0
+            0.95             0.95                0
+          0.9929           0.9929                0
+           1.025            1.025                0
+           1.047            1.047                0
+           1.063            1.063                0
+           1.086            1.086                0
+           1.137            1.137                0
+           1.175            1.175                0
+           1.504            1.238           0.8541
+           1.504            1.238          -0.8541
+           2.044            2.044                0
+       2.493e+05       -1.247e+05        2.159e+05
+       2.493e+05       -1.247e+05       -2.159e+05
+       2.493e+05        2.493e+05                0
+       1.928e+16        1.928e+16                0
+       6.797e+16       -6.797e+16                0
+       6.999e+16       -6.999e+16                0
+       8.749e+16        8.749e+16                0
+       1.041e+17       -1.041e+17                0
+       1.142e+17        1.142e+17                0
+       2.064e+17        2.064e+17                0
+       7.331e+17        7.331e+17                0
+       1.299e+18        1.299e+18                0
+       7.365e+18       -7.365e+18                0
+       8.749e+18        8.749e+18                0
+       8.963e+19        8.963e+19                0
+       2.534e+20       -2.534e+20                0
+       1.147e+21       -1.147e+21                0
+
+
+There are 26 eigenvalue(s) larger than 1 in modulus 
+for 26 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+     Niter    resnorm   stepnorm     lambda      rcond  convergence
+-------------------------------------------------------------------
+         0      4.875          0          1  0.0009911          Inf
+         1     0.3853     0.3101          1   0.002112        2.538
+         2    0.01087    0.05594          1   0.001718        3.568
+         3  0.0001284   0.007563          1   0.001675        4.439
+         4  2.341e-08  0.0001041          1   0.001674         8.61
+         5  4.752e-14  1.902e-08          1   0.001674        13.11
+
+--------------------------------------------------------
+MODEL SIMULATION:
+
+Iter: 1,	 err. = 0.000345, 	 time = 0.114
+Iter: 2,	 err. = 0.017812, 	 time = 0.025
+Iter: 3,	 err. = 0.00838, 	 time = 0.022
+Iter: 4,	 err. = 0.00051373, 	 time = 0.019
+Iter: 5,	 err. = 4.6548e-06, 	 time = 0.025
+
+Total time of simulation: 0.432
+--------------------------------------------------------
+
+Perfect foresight solution found.
+
+Total computing time : 0h00m01s
+Note: warning(s) encountered in MATLAB/Octave code

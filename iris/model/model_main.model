@@ -1,0 +1,12 @@
+!import(model/model_parameters.model)
+!import(model/model_shocks.model)
+!import(model/model_variables.model)
+
+!if strcmp(pension_system,'PAYG')
+    % PAYG system
+    !import(model/model_equations_PAYG.model)
+!else 
+    % FF system
+    !import(model/model_equations_FF.model)
+!end
+

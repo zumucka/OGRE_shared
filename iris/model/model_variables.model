@@ -1,0 +1,77 @@
+!transition_variables
+%% DEMOGRAPHY
+'old vs. young ratio' share
+'share of young in the population' share_y
+'probability of dying (mortality)' prob_die
+'probability of retirement' prob_ret
+'fertility rate' fert
+'total popoulation growth rate' g_n
+'growth rate of young' g_ny
+'growth rate of old' g_no
+'total growth rate' g
+
+%% HOUSEHOLDS
+'stochastic discount factor' Omega_o
+'consumption (total)' C
+'retired: consumption' C_o
+'retired: other income' Inc_o
+'retired: consumption price functional' PF_o
+'retired: accumulated wealth' B_o
+'young: consumption' C_y
+'young: consumption price functional' PF_y
+'young: accumulated wealth' B_y
+'young: income' Inc_y
+'young: labour income' Labinc_y
+'young: profit income' Profinc_y
+'young: potential pension income' Peninc_y
+Lambda_t
+Lambda
+
+%% FIRMS 
+'aggregate production (total)' Y
+'investment' I
+'technology process' a
+'technology growth rate' g_a
+'profit' Profit
+'real rental rate on capital' z
+'capital stock' K
+'real marginal costs' mc
+'shadow price of capital' q
+'price adjustment costs' adj_pr
+adj_pr_d
+'investment adjustment' adj_inv
+adj_inv_d
+'formal: price inflation rate' pi
+
+%% LABOUR MARKET
+'real wage' w
+'labour supply' L
+'hiring costs' hc
+'newly hired' H
+'probability of being hired' prob_h
+'wage bargaining max. accepted' w_b_max
+'unemployment' U
+
+%% MONETARY
+'real interest rate' r
+'nominal interest rate' i
+
+%% FISCAL
+'consumption tax rate' tau_c
+'labour tax rate (households)' tau_lw
+'social security rate (firms)' tau_sf
+'social security rate (workers)' tau_sw
+'personal income tax' tau_pi
+'labour tax rate' tau_l
+'unemployment benefits' w_u
+'government consumption' Gov
+'lump-sum taxes' Lump
+'pension income' Pen
+'debt' B
+'total pension savings' B_pen
+'GDP' GDP
+'primary balance' PB
+'total government balance' GB
+'total government balance target' GB_tar
+'revenues' Rev
+'expenditures' Exp

@@ -1,0 +1,103 @@
+!transition_variables
+'fully funded system pension' Pen_FF
+'young: individual pension account balance' B_pen_y
+'fully funded pension of just retired' Pen_FF_yo
+'old: individual pension account balance' B_pen_o
+!parameters
+!transition_shocks
+
+!transition_equations
+%% DEMOGRAPHY
+share = (1-prob_die{-1})/(1-prob_ret{-1}+fert)*share{-1}+prob_ret{-1}/(1-prob_ret{-1}+fert) !! share = prob_ret/(prob_die-prob_ret+fert);
+share_y = 1/(1+share);
+1+g_ny = 1-prob_ret{-1}+fert;
+1+g_no = 1-prob_die{-1}+prob_ret{-1}/share{-1};
+1+g_n = (1+g_ny)*(1+share)/(1+share{-1});
+1+g = (1+g_n)*(1+g_a);
+g_a = a/a{-1}*(&g_a);
+
+%% HOUSEHOLDS
+% retired
+Omega_o = 1+(1-prob_die)/(1+r)*Omega_o{+1};
+Inc_o = (1-xi)*(Profit-Lump)+(1+g{+1})/(1+r{+1})*(1-prob_die)/(1+g_no{+1})*Inc_o{+1};
+PF_o = (1+tau_c)+(1-prob_die)*(1+r)^(1/gamma-1)*Lambda{+1}*PF_o{+1};
+C_o*PF_o = Pen*Omega_o+Inc_o+(1+r{-1})/(1+g)*(prob_ret*B_y{-1}+B_o{-1});
+
+% young
+PF_y = (1+tau_c)+(1+r)^(1/gamma-1)*Lambda{+1}*(prob_ret*PF_o{+1}+(1-prob_ret)*PF_y{+1});
+Inc_y = Labinc_y+Profinc_y+(1-prob_ret)/(1+r)*(1+g{+1})/(1+g_ny{+1})*Inc_y{+1};
+Labinc_y = (1-tau_lw)*w*L+w_u*U;
+Profinc_y = xi*(Profit-Lump);
+Peninc_y = (1+g{+1})*(Pen{+1}*Omega_o{+1}+prob_ret/((1+g_ny{+1})*share{+1})*Inc_o{+1})+(1-prob_ret{+1})/(1+r{+1})*(1+g{+1})/(1+g_ny{+1})*Peninc_y{+1};
+C_y*PF_y = Inc_y+Peninc_y/(1+r)+(1+r{-1})*(1-prob_ret{-1})/(1+g)*B_y{-1};
+(1+tau_c)*C_y+B_y = Labinc_y+Profinc_y+(1+r{-1})*(1-prob_ret)/(1+g)*B_y{-1};
+
+% common
+Lambda_t = (1+shk_c)/(1+tau_c) !! Lambda_t = 1/(tau_c);
+Lambda = (betta*Lambda_t{+1}/Lambda_t)^(1/gamma) !! Lambda = betta^(1/gamma);
+
+%% FIRMS
+adj_pr = phi_pr/2*((1+pi)/(1+pi{-1})^gamma_pr-1)^2 !! adj_pr = 0;
+adj_pr_d = phi_pr*((1+pi)/(1+pi{-1})^gamma_pr-1) !! adj_pr_d = 0;
+(phi-1)+(adj_pr+(1+pi)/(1+pi{-1})^gamma_pr*adj_pr_d)-Y{+1}/Y*(1+g{+1})/(1+r)*adj_pr_d{+1}*(1+pi{+1})/(1+pi)^gamma_pr=phi*mc;
+mc = (z/alpha)^alpha*(((1+tau_sf)*w+hc-hc{+1}*(1-prob_f)*(1+g_a{+1})/(1+r))/(a*(1-alpha)))^(1-alpha);
+K = alpha*mc/z*Y;
+mc*(1-alpha)*Y/L-(1+tau_sf)*w = hc-hc{+1}*(1-prob_f)*(1+g_a{+1})/(1+r);
+Profit = Y-z*K-(1+tau_sf)*w*L-hc*H-Y*adj_pr;
+z{+1}+q{+1}*(1-delta) = (1+r)*q !! z = r+delta;
+adj_inv = phi_inv/2*(I/I{-1}-1)^2 !! adj_inv = 0;
+adj_inv_d = phi_inv*(I/I{-1}-1) !! adj_inv_d = 0;
+I*(1-adj_inv) = K{+1}*(1+g{+1})-(1-delta)*K;
+1 = q*(1-adj_inv-adj_inv_d*I/I{-1})+q{+1}/(1+r)*adj_inv_d{+1}*(I{+1}/I)^2 !! q = 1;
+
+%% LABOUR MARKET
+hc = kappa*(prob_h)^alpha_hc;
+prob_h = (1+g_n)*H/(U{-1}+prob_f*L{-1});
+L = (1-prob_f)*L{-1}/(1+g_n)+H;
+w_b_max = sigma/(1-sigma)*hc*(1-tau_lw)/(1+tau_sf);
+w_b_max = (1-tau_lw)*w-w_u+(1+g_a{+1})*(1-prob_f)/(1+r)*(1-prob_h{+1})*w_b_max{+1};
+
+%% MONETARY
+(1+i) = (1+i{-1})^rho_i*((1+(&r))*(1+pi{+1})^phi_pi)^(1-rho_i)*exp(shk_i);
+1+i = (1+r)*(1+pi{+1}) !! i = r;
+
+%% FISCAL
+% accounting
+B = B{-1}/(1+g)-GB;
+GB = PB-r{-1}/(1+g)*B{-1};
+PB = Rev-Exp;
+Rev = tau_c*C+Lump+tau_l*w*L;
+% fiscal rules
+Lump = eta_lump*(&Lump)+(1-eta_lump)*(rho_lump*Lump{-1}+(1-rho_lump)*(GB_tar-GB)+shk_lump);
+tau_pi = eta_tau_pi*(&tau_pi)+(1-eta_tau_pi)*(rho_tau_pi*tau_pi{-1}+(1-rho_tau_pi)*(GB_tar-GB)+shk_tau_pi);
+tau_sw = eta_tau_sw*(&tau_sw)+(1-eta_tau_sw)*(rho_tau_sw*tau_sw{-1}+(1-rho_tau_sw)*(GB_tar-GB)+shk_tau_sw);
+tau_sf = eta_tau_sf*(&tau_sf)+(1-eta_tau_sf)*(rho_tau_sf*tau_sf{-1}+(1-rho_tau_sf)*(GB_tar-GB)+shk_tau_sf);
+tau_c = eta_tau_c*(&tau_c)+(1-eta_tau_c)*(rho_tau_c*tau_c{-1}+(1-rho_tau_c)*(GB_tar-GB)+shk_tau_c);
+Gov = eta_gov*(&Gov)+(1-eta_gov)*(rho_gov*Gov{-1}/(1+g)+(1-rho_gov)*(-GB_tar+GB)+shk_gov);
+w_u = eta_w_u*(&w_u)+(1-eta_w_u)*(rho_w_u*w_u{-1}/(1+g_a)+(1-rho_w_u)*(-GB_tar+GB)+shk_w_u);
+tau_lw = tau_pi+tau_sw;
+
+%% MARKET CLEARING
+U = share_y-L;
+Y = C+I+Gov+hc*H+I*adj_inv+adj_pr*Y;
+C = C_o+C_y;
+GDP = C+I+Gov;
+B+q*K{+1}*(1+g{+1}) = B_o+B_y+B_pen;
+
+%% EXOGENOUS PROCESSES
+prob_die = rho_prob_die*prob_die{-1}+(1-rho_prob_die)*(&prob_die)+shk_prob_die;
+prob_ret = rho_prob_ret*prob_ret{-1}+(1-rho_prob_ret)*(&prob_ret)+shk_prob_ret;
+fert = rho_fert*fert{-1}+(1-rho_fert)*(&fert)+shk_fert;
+a = rho_a*a{-1}+(1-rho_a)*(&a)+shk_a !! a = 1;
+GB_tar = rho_GB_tar*GB_tar{-1}+(1-rho_GB_tar)*(&GB_tar)+shk_GB_tar;
+
+
+%% PENSION SYSTEM
+Exp = w_u*U+Gov;
+Pen = Pen_FF;
+tau_l = tau_pi;
+B_pen_y = (tau_sf+tau_sw)*w*L+(1+r{-1})*(1-prob_ret{-1})/(1+g)*B_pen_y{-1};
+Pen_FF_yo*Omega_o = (1+r{-1})/(1+g)*prob_ret{-1}*B_pen_y{-1};
+Pen_FF = Pen_FF_yo+(1-prob_die{-1})/(1+g)*Pen_FF{-1};
+(1+r{-1})/(1+g)*(prob_ret{-1}*B_pen_y{-1}+B_pen_o{-1}) = B_pen_o+Pen_FF;
+B_pen = B_pen_y+B_pen_o;

@@ -1,0 +1,26 @@
+!transition_shocks
+%% DEMOGRAPHY
+'shock to probability of dying' shk_prob_die
+'shock to probability of retirement' shk_prob_ret
+'shock to fertility rate' shk_fert
+
+%% FIRMS & TECHNOLOGY
+'shock to technology' shk_a
+
+%% LABOUR MARKET
+
+%% FISCAL
+'shock to lump-sum tax' shk_lump
+'shock to personal income tax rate' shk_tau_pi
+'shock to social security contribution rate (worker)' shk_tau_sw
+'shock to social security contribution rate (firm)' shk_tau_sf
+'shock to consumption tax rate' shk_tau_c
+'shock to unemployment benefit' shk_w_u
+'shock to government consumption' shk_gov
+'shock to target government balance' shk_GB_tar
+
+%% HOUSEHOLDS
+'preference/demand shock' shk_c
+
+%% MONETARY
+'shock to nominal interest rate' shk_i
