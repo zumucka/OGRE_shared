@@ -1,1 +1,73 @@
-<mxfile host="app.diagrams.net" modified="2022-02-28T07:06:18.603Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.62" version="16.6.4" etag="GU4rjJAo-qGWz4--19sY" type="github"><diagram id="GxeuKTXnx9VGVfUCvlwk">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-03-01T05:27:52.744Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.62" etag="SlW2bxgcUChhi8jXgdIi" version="16.6.4" type="github">
+  <diagram id="GxeuKTXnx9VGVfUCvlwk" name="Page-1">
+    <mxGraphModel dx="1532" dy="808" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-5" value="$\omega^Y$" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LXL8oJjJBJb_XbVYSXAR-1" target="LXL8oJjJBJb_XbVYSXAR-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LXL8oJjJBJb_XbVYSXAR-1" target="LXL8oJjJBJb_XbVYSXAR-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-12" value="$\rho$" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="LXL8oJjJBJb_XbVYSXAR-9">
+          <mxGeometry x="-0.2853" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-1" value="Chorý s diagnózu Y" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-4" value="$\sigma$" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LXL8oJjJBJb_XbVYSXAR-2" target="LXL8oJjJBJb_XbVYSXAR-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="LXL8oJjJBJb_XbVYSXAR-2" target="LXL8oJjJBJb_XbVYSXAR-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-13" value="$\tilde{\omega}^X$" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="LXL8oJjJBJb_XbVYSXAR-6">
+          <mxGeometry x="0.2586" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-2" value="Zvšok populácie&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-3" value="Mŕtvy" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="LXL8oJjJBJb_XbVYSXAR-8" target="LXL8oJjJBJb_XbVYSXAR-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="130" />
+              <mxPoint x="390" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-15" value="$\lambda$" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="LXL8oJjJBJb_XbVYSXAR-10">
+          <mxGeometry x="-0.1512" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.008;entryY=0.621;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="LXL8oJjJBJb_XbVYSXAR-8" target="LXL8oJjJBJb_XbVYSXAR-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="357" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-14" value="$\omega^I$" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="LXL8oJjJBJb_XbVYSXAR-11">
+          <mxGeometry x="-0.5064" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LXL8oJjJBJb_XbVYSXAR-8" value="Idle" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
